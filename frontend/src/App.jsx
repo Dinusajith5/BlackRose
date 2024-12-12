@@ -6,6 +6,9 @@ import Cart from "./pages/Cart"
 import Login from "./pages/Login"
 import Product from "./pages/Product"
 import Footer from "./components/Footer"
+// import image
+import bannerposey from './assets/bannerkids.png'
+import bannerlongbouqet from './assets/bannermens.png'
 
 export default function App() {
   return (
@@ -18,14 +21,14 @@ export default function App() {
     <Routes>
 
     <Route path="/" element={<Home />} />
-    <Route path="/Posey" element={<Category />} />
-    <Route path="/Long Bouqet" element={<Category />} />
+    <Route path="/Posey" element={<Category  Category="Poseys" banner={bannerposey}/>} />
+    <Route path="/Long Bouqet" element={<Category  Category="Long_Bouqes" banner={bannerlongbouqet}/>} />
     {/* <Route path="/" element={<Category />} /> */}
     <Route path="/" element={<Product />} >
     <Route path=":productId" element={<Product/>} />
     </Route>
     <Route path="/" element={<Cart />} />
-    <Route path="/" element={<Login />} />
+    <Route path="/Login" element={<Login />} />
 
     </Routes>
 

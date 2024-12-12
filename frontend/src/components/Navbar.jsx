@@ -7,9 +7,10 @@ const Navbar = ({ containerStyles }) => {
   return (
    <nav className={`${containerStyles}`}>
 
-    <NavLink to={'/'} ><div className="flexCenter gap-x-1"><MdHomeFilled/>Home</div></NavLink>
-    <NavLink to={'/Posey'} ><div className="flexCenter gap-x-1"><MdCategory/>Posey</div></NavLink>
-    <NavLink to={'/Long Bouqet'} ><div className="flexCenter gap-x-1"><MdCategory/>Long Bouqet</div></NavLink>
+    <NavLink to={'/'}className={({isActive})=> isActive ? "active_link":""} ><div className="flexCenter gap-x-1"><MdHomeFilled/>Home</div></NavLink>
+    <NavLink to={'/Posey'} className={({isActive})=> isActive ? "active_link":""}><div className="flexCenter gap-x-1"><MdCategory/>Posey</div></NavLink>
+    <NavLink to={'/Long Bouqet'} className={({isActive})=> isActive ? "active_link":""}><div className="flexCenter gap-x-1"><MdCategory/>Long Bouqet</div></NavLink>
+    
 
     
    </nav>
